@@ -62,7 +62,7 @@ class ArgumentWrapper(object):
 
     def __wrap_patchings(self, patchings, removed_argument_dict, new_argument_list_index):
         for patch in patchings:
-            if patch.attribute_name and self.__arguments_dict.has_key(patch.attribute_name):
+            if patch.attribute_name and patch.attribute_name in self.__arguments_dict:
                 patch.new = MagicMock()
                 patch.new.return_value = self.__arguments_dict.get(patch.attribute_name)
                 removed_argument_dict.add(patch.attribute_name)
