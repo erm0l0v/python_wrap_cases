@@ -47,7 +47,7 @@ class ArgumentWrapper(object):
         self.__arguments_dict = arguments_dict
 
     def wrap_function(self, function):
-        if not function.func_dict.has_key('patchings'):
+        if not function.__dict__.has_key('patchings'):
             return self.__arguments_list, self.__arguments_dict
         new_argument_list_index = 0
         removed_argument_dict = set()
