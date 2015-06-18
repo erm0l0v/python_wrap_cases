@@ -51,7 +51,7 @@ class ArgumentWrapper(object):
             return self.__arguments_list, self.__arguments_dict
         new_argument_list_index = 0
         removed_argument_dict = set()
-        patchings = function.func_dict.get('patchings')
+        patchings = function.__dict__.get('patchings')
         removed_argument_dict, new_argument_list_index = self.__wrap_patchings(patchings, removed_argument_dict, new_argument_list_index)
         new_argument_list = self.__arguments_list[new_argument_list_index:]
         new_argument_dict = dict()
