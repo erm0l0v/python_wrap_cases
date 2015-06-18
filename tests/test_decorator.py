@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 from unittest import TestCase
-from python_wrap_cases import wrap_case, WrapCasesMixin
+from python_wrap_cases import *
 from python_wrap_cases.case_wrapper import TestCasesWrapper
 
 
@@ -21,7 +21,7 @@ class TestFunction(TestCase):
 
     def test_set_wrapper(self):
         wrapper = getattr(function, 'test_cases_wrapper')
-        self.assertIsInstance(wrapper, TestCasesWrapper)
+        self.assertTrue(isinstance(wrapper, TestCasesWrapper))
 
     def test_keep_doc(self):
         doc = function.__doc__
@@ -36,7 +36,7 @@ class TestFunctionWitchTwoTestCase(TestCase):
 
     def test_set_wrapper(self):
         wrapper = getattr(function_witch_two_test_case, 'test_cases_wrapper')
-        self.assertIsInstance(wrapper, TestCasesWrapper)
+        self.assertTrue(isinstance(wrapper, TestCasesWrapper))
 
     def test_keep_doc(self):
         doc = function_witch_two_test_case.__doc__

@@ -7,6 +7,6 @@ class ArgumentsCollection(object):
         self.kwargs = kwargs
 
     def __str__(self):
-        arguments = map(repr, self.args)
+        arguments = list(map(repr, self.args))
         arguments = arguments + ['{0}({1})'.format(str(key), repr(self.kwargs[key])) for key in self.kwargs]
         return '_'.join(arguments)
