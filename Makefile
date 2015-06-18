@@ -38,7 +38,7 @@ lint:
 	flake8 python_wrap_cases tests
 
 test:
-	python setup.py nosetests
+	python setup.py test
 
 test-all:
 	tox
