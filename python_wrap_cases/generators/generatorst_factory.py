@@ -1,12 +1,12 @@
 from __future__ import unicode_literals
 from functools import wraps
 from .list_generator import ListGenerator
-from .func_generator import FuncGenerator
+from .custom_generator import CustomGenerator
 
 
 generators_dict = dict(
     list=ListGenerator,
-    func=FuncGenerator
+    custom=CustomGenerator
 )
 
 

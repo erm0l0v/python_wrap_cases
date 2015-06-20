@@ -45,11 +45,3 @@ class TestFunctionWitchTwoTestCase(TestCase):
     def test_cases_count_2(self):
         wrapper = getattr(function_witch_two_test_case, 'test_cases_wrapper')
         self.assertEqual(len(wrapper.cases), 2)
-
-
-class TestWithTestCases(TestCase, WrapCasesMixin):
-
-    @wrap_case(1, 2, 3)
-    @wrap_case(2, 2, 4)
-    def test_sum(self, a, b, result):
-        self.assertEqual(a+b, result)
