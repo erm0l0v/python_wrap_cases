@@ -20,4 +20,4 @@ class BaseCase(unittest.TestCase):
     def test_contains_case_name(self):
         if self.case_class:
             for name in self.expected_names:
-                self.assertTrue(name in self.tests)
+                self.assertTrue(name in self.tests, 'test: "{0}" not found'.format(name))
