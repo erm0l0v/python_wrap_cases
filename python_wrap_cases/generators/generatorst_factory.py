@@ -2,11 +2,13 @@ from __future__ import unicode_literals
 from functools import wraps
 from .list_generator import ListGenerator
 from .custom_generator import CustomGenerator
+from .sync_list_generator import SyncListGenerator
 
 
 generators_dict = dict(
     list=ListGenerator,
-    custom=CustomGenerator
+    custom=CustomGenerator,
+    sync_list=SyncListGenerator
 )
 
 

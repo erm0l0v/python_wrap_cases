@@ -5,5 +5,5 @@ class BaseGenerator(object):
 
     dependent = False
 
-    def generate_cases(self, *args, **kwargs):
+    def generate_cases(self, arg_index, key, *args, **kwargs):
         pass

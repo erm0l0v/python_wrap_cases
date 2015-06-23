@@ -9,7 +9,7 @@ class CustomGenerator(BaseGenerator):
 
     dependent = True
 
-    def generate_cases(self, *args, **kwargs):
+    def generate_cases(self, arg_index, key, *args, **kwargs):
         result = self.func(*args, **kwargs)
         if not (isinstance(result, list) or isinstance(result, tuple)):
             result = [result]

@@ -7,5 +7,5 @@ class ListGenerator(BaseGenerator):
     def __init__(self, collection):
         self.collection = collection
 
-    def generate_cases(self, *args, **kwargs):
+    def generate_cases(self, arg_index, key, *args, **kwargs):
         return self.collection

@@ -22,7 +22,7 @@ def find_contain_generator(*args, **kwargs):
 
 def generate_params(arg_index, key, generator, *args, **kwargs):
     args_collection = list()
-    included_args = generator.generate_cases(*args, **kwargs)
+    included_args = generator.generate_cases(arg_index, key, *args, **kwargs)
     for included_arg in included_args:
         new_args = [a for a in args]
         new_kwargs = kwargs.copy()
