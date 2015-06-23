@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 import unittest
 from mock import patch, MagicMock
 from python_wrap_cases import *
+from tests.cases.base_case import BaseCase
 
 
 class TestedClass():
@@ -43,26 +44,13 @@ class DecoratorWithPatchObject(unittest.TestCase, WrapCasesMixin):
         self.assertEqual(tested_class.tested_method(), return_value)
 
 
-class DecoratorWithPatchObjectTest(unittest.TestCase):
+class DecoratorWithPatchObjectTest(BaseCase):
 
-    def setUp(self):
-        self.obj = unittest.TestLoader().loadTestsFromTestCase(DecoratorWithPatchObject)
-        self.tests = map(lambda x: x._testMethodName, self.obj._tests)
-
-    def test_methods_count_5(self):
-        self.assertEqual(self.obj.countTestCases(), 5)
-
-    def test_has_test_method(self):
-        self.assertIn('test_method', self.tests)
-
-    def test_has_test_method_with_test_case_2_2(self):
-        self.assertIn('test_method_with_test_case_2_2', self.tests)
-
-    def test_has_test_method_with_test_cases_2_2_4(self):
-        self.assertIn('test_method_with_test_cases_2_2_4', self.tests)
-
-    def test_has_test_method_with_test_cases_3_3_6(self):
-        self.assertIn('test_method_with_test_cases_3_3_6', self.tests)
-
-    def test_has_test_method_with_test_cases_4_4_8(self):
-        self.assertIn('test_method_with_test_cases_4_4_8', self.tests)
+    case_class = DecoratorWithPatchObject
+    cases_names = [
+        'test_method',
+        'test_method_with_test_case_2_2',
+        'test_method_with_test_cases_2_2_4',
+        'test_method_with_test_cases_3_3_6',
+        'test_method_with_test_cases_4_4_8',
+    ]

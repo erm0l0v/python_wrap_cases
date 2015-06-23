@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 import unittest
 from mock import patch, DEFAULT
 from python_wrap_cases import *
+from tests.cases.base_case import BaseCase
 
 
 class TestedClass():
@@ -49,35 +50,16 @@ class DecoratorWithPatchMultiple(unittest.TestCase, WrapCasesMixin):
         self.assertEqual(tested_class.tested_method(), result)
 
 
-class DecoratorWithPatchMultipleTest(unittest.TestCase):
+class DecoratorWithPatchMultipleTest(BaseCase):
 
-    def setUp(self):
-        self.obj = unittest.TestLoader().loadTestsFromTestCase(DecoratorWithPatchMultiple)
-        self.tests = map(lambda x: x._testMethodName, self.obj._tests)
-
-    def test_methods_count_8(self):
-        self.assertEqual(self.obj.countTestCases(), 8)
-
-    def test_has_test_method(self):
-        self.assertIn('test_method', self.tests)
-
-    def test_has_test_method_with_test_case_foo_a_2_foo_b_2(self):
-        self.assertIn('test_method_with_test_case_foo_a(2)_foo_b(2)', self.tests)
-
-    def test_has_test_method_with_test_cases_foo_a_2_foo_b_2_result_4(self):
-        self.assertIn('test_method_with_test_cases_foo_a(2)_foo_b(2)_result(4)', self.tests)
-
-    def test_has_test_method_with_test_cases_foo_a_3_foo_b_3_result_6(self):
-        self.assertIn('test_method_with_test_cases_foo_a(3)_foo_b(3)_result(6)', self.tests)
-
-    def test_has_test_method_with_test_cases_foo_a_4_foo_b_4_result_8(self):
-        self.assertIn('test_method_with_test_cases_foo_a(4)_foo_b(4)_result(8)', self.tests)
-
-    def test_has_test_method_test_case_only_for_one_argument_foo_a_2_result_4(self):
-        self.assertIn('test_method_test_case_only_for_one_argument_foo_a(2)_result(4)', self.tests)
-
-    def test_has_test_method_test_case_only_for_one_argument_foo_a_4_result_6(self):
-        self.assertIn('test_method_test_case_only_for_one_argument_foo_a(4)_result(6)', self.tests)
-
-    def test_has_test_method_test_case_only_for_one_argument_foo_a_8_result_10(self):
-        self.assertIn('test_method_test_case_only_for_one_argument_foo_a(8)_result(10)', self.tests)
+    case_class = DecoratorWithPatchMultiple
+    cases_names = [
+        'test_method',
+        'test_method_with_test_case_foo_a(2)_foo_b(2)',
+        'test_method_with_test_cases_foo_a(2)_foo_b(2)_result(4)',
+        'test_method_with_test_cases_foo_a(3)_foo_b(3)_result(6)',
+        'test_method_with_test_cases_foo_a(4)_foo_b(4)_result(8)',
+        'test_method_test_case_only_for_one_argument_foo_a(2)_result(4)',
+        'test_method_test_case_only_for_one_argument_foo_a(4)_result(6)',
+        'test_method_test_case_only_for_one_argument_foo_a(8)_result(10)',
+    ]

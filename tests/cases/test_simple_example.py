@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 import unittest
 from python_wrap_cases import *
+from tests.cases.base_case import BaseCase
 
 
 class SimpleExample(unittest.TestCase, WrapCasesMixin):
@@ -11,17 +12,11 @@ class SimpleExample(unittest.TestCase, WrapCasesMixin):
         self.assertEqual(a+b, result)
 
 
-class SimpleExampleTest(unittest.TestCase):
+class SimpleExampleTest(BaseCase):
 
-    def setUp(self):
-        self.obj = unittest.TestLoader().loadTestsFromTestCase(SimpleExample)
-        self.tests = map(lambda x: x._testMethodName, self.obj._tests)
+    case_class = SimpleExample
+    cases_names = [
+        'test_sum_1_2_3',
+        'test_sum_2_2_4',
+    ]
 
-    def test_methods_count_2(self):
-        self.assertEqual(self.obj.countTestCases(), 2)
-
-    def test_has_test_sum_1_2_3(self):
-        self.assertIn('test_sum_1_2_3', self.tests)
-
-    def test_has_test_sum_2_2_4(self):
-        self.assertIn('test_sum_2_2_4', self.tests)

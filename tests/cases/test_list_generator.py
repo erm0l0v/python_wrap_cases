@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 import unittest
 from python_wrap_cases import *
+from tests.cases.base_case import BaseCase
 
 
 class ListGenerator(unittest.TestCase, WrapCasesMixin):
@@ -10,26 +11,15 @@ class ListGenerator(unittest.TestCase, WrapCasesMixin):
         self.assertEqual(number/1, number)
 
 
-class ListGeneratorTest(unittest.TestCase):
+class ListGeneratorTest(BaseCase):
 
-    def setUp(self):
-        self.obj = unittest.TestLoader().loadTestsFromTestCase(ListGenerator)
-        self.tests = map(lambda x: x._testMethodName, self.obj._tests)
-
-    def test_methods_count_4(self):
-        self.assertEqual(self.obj.countTestCases(), 4)
-
-    def test_has_test_div_1_number_0(self):
-        self.assertIn('test_div_1_number(0)', self.tests)
-
-    def test_has_test_div_1_number_1(self):
-        self.assertIn('test_div_1_number(1)', self.tests)
-
-    def test_has_test_div_1_number_2(self):
-        self.assertIn('test_div_1_number(2)', self.tests)
-
-    def test_has_test_div_1_number_3(self):
-        self.assertIn('test_div_1_number(3)', self.tests)
+    case_class = ListGenerator
+    cases_names = [
+        'test_div_1_number(0)',
+        'test_div_1_number(1)',
+        'test_div_1_number(2)',
+        'test_div_1_number(3)',
+    ]
 
 
 class MultipleListGenerator(unittest.TestCase, WrapCasesMixin):
@@ -39,23 +29,12 @@ class MultipleListGenerator(unittest.TestCase, WrapCasesMixin):
         self.assertGreaterEqual(a, b)
 
 
-class MultipleListGeneratorTest(unittest.TestCase):
+class MultipleListGeneratorTest(BaseCase):
 
-    def setUp(self):
-        self.obj = unittest.TestLoader().loadTestsFromTestCase(MultipleListGenerator)
-        self.tests = map(lambda x: x._testMethodName, self.obj._tests)
-
-    def test_methods_count_4(self):
-        self.assertEqual(self.obj.countTestCases(), 4)
-
-    def test_has_test_gte_a_1_b_0(self):
-        self.assertIn('test_gte_a(1)_b(0)', self.tests)
-
-    def test_has_test_gte_a_1_b_1(self):
-        self.assertIn('test_gte_a(1)_b(1)', self.tests)
-
-    def test_has_test_gte_a_2_b_0(self):
-        self.assertIn('test_gte_a(2)_b(0)', self.tests)
-
-    def test_has_test_gte_a_2_b_1(self):
-        self.assertIn('test_gte_a(2)_b(1)', self.tests)
+    case_class = MultipleListGenerator
+    cases_names = [
+        'test_gte_a(1)_b(0)',
+        'test_gte_a(1)_b(1)',
+        'test_gte_a(2)_b(0)',
+        'test_gte_a(2)_b(1)',
+    ]
