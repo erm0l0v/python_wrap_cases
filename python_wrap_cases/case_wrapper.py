@@ -5,12 +5,18 @@ from .generators.generatorst_factory import find_generators
 
 
 def find_contain_generator(*args, **kwargs):
+    result = None
     for arg in args:
         if isinstance(arg, BaseGenerator):
             return args.index(arg), None, arg
     for key in kwargs:
         if isinstance(kwargs[key], BaseGenerator):
-            return None, key, kwargs[key]
+            if not result and kwargs[key].dependent:
+                result = None, key, kwargs[key]
+            else:
+                return None, key, kwargs[key]
+    if result:
+        return result
     return None, None, None
 
 

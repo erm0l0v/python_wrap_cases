@@ -26,7 +26,7 @@ class MultipleListGenerator(unittest.TestCase, WrapCasesMixin):
 
     @wrap_case(a__list=[1, 2], b__list=[0, 1])
     def test_gte(self, a, b):
-        self.assertGreaterEqual(a, b)
+        self.assertTrue(a >= b)
 
 
 class MultipleListGeneratorTest(BaseCase):
