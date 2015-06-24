@@ -125,5 +125,8 @@ Console output:
 
 ::
 
-* Free software: BSD license
-* Documentation: https://python_wrap_cases.readthedocs.org.
+
+
+Free software: BSD license
+
+Documentation: https://python_wrap_cases.readthedocs.org.
