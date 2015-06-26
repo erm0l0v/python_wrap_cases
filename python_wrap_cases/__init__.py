@@ -4,4 +4,4 @@ __author__ = 'Kirill Ermolov'
 __email__ = 'erm0l0v@ya.ru'
 __version__ = '0.1.2'
 
-from python_wrap_cases.wrap_cases import *
+from .wrap_cases import *
