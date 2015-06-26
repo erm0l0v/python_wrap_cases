@@ -125,7 +125,14 @@ Console output:
 
 ::
 
+Installation
+------------
 
+.. code::
+
+    pip install python_wrap_cases
+
+::
 
 Free software: BSD license
 
