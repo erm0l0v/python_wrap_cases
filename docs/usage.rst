@@ -87,8 +87,6 @@ List generator helps to generate cases based on list of arguments.
 
 This code will work like this one:
 
-List generator helps to generate cases based on list of arguments.
-
 .. code:: python
 
     import unittest
