@@ -9,7 +9,7 @@ History
 * First release on PyPI.
 
 
-0.1.1 (2015-06-26)
+0.1.2 (2015-06-26)
 ---------------------
 
 * Fix generators import

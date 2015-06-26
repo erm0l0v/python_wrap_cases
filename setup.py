@@ -41,14 +41,14 @@ test_requirements = load_requirements('test_requirements.txt')
 
 setup(
     name='python_wrap_cases',
-    version='0.1.1',
+    version='0.1.2',
     description="Simple library for generate test cases.",
     long_description=readme + '\n\n' + history,
     author="Kirill Ermolov",
     author_email='erm0l0v@ya.ru',
     url='https://github.com/erm0l0v/python_wrap_cases',
     packages=[
-        'python_wrap_cases',
+        'python_wrap_cases', 'python_wrap_cases.generators',
     ],
     package_dir={'python_wrap_cases':
                  'python_wrap_cases'},
