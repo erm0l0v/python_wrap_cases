@@ -8,6 +8,10 @@ Python wrap cases
 .. image:: https://img.shields.io/pypi/v/python_wrap_cases.svg
         :target: https://pypi.python.org/pypi/python_wrap_cases
 
+.. image:: https://readthedocs.org/projects/python-wrap-cases/badge/?version=latest
+        :target: https://readthedocs.org/projects/python-wrap-cases/?badge=latest
+        :alt: Documentation Status
+
 
 Simple library for generate test cases.
 
