@@ -1,5 +1,5 @@
-from python_wrap_cases.decorators import TestCaseDecorator
-from python_wrap_cases.metaclasses import TestCaseMeta
+from .decorators import TestCaseDecorator
+from .metaclasses import TestCaseMeta
 from pip._vendor import six
 
 
