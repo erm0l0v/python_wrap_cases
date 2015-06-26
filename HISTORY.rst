@@ -13,3 +13,8 @@ History
 ---------------------
 
 * Fix generators import
+
+0.1.3 (2015-06-26)
+---------------------
+
+* Add some docs
