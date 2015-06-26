@@ -1,8 +1,8 @@
 from __future__ import unicode_literals
 from functools import wraps
-from .list_generator import ListGenerator
-from .custom_generator import CustomGenerator
-from .sync_list_generator import SyncListGenerator
+from python_wrap_cases.generators.list_generator import ListGenerator
+from python_wrap_cases.generators.custom_generator import CustomGenerator
+from python_wrap_cases.generators.sync_list_generator import SyncListGenerator
 
 
 generators_dict = dict(

@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
-from .argumets_collection import ArgumentsCollection
-from .generators.base_generator import BaseGenerator
-from .generators.generatorst_factory import find_generators
+from python_wrap_cases.argumets_collection import ArgumentsCollection
+from python_wrap_cases.generators.base_generator import BaseGenerator
+from python_wrap_cases.generators.generatorst_factory import find_generators
 
 
 def find_contain_generator(*args, **kwargs):

@@ -1,5 +1,5 @@
 from __future__ import unicode_literals
-from .base_generator import BaseGenerator
+from python_wrap_cases.generators.base_generator import BaseGenerator
 
 
 class SyncListGenerator(BaseGenerator):

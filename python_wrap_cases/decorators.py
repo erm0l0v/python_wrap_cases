@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 from functools import wraps
-from .case_wrapper import TestCasesWrapper
+from python_wrap_cases.case_wrapper import TestCasesWrapper
 
 
 class TestCaseDecorator(object):
