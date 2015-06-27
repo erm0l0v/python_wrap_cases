@@ -13,7 +13,7 @@ Python wrap cases
         :alt: Documentation Status
 
 
-Simple library for generate test cases.
+Simple library for generate test cases with parameters.
 
 What is this?
 -------------
@@ -25,7 +25,8 @@ Let's write some tests for this function:
 .. code:: python
 
     import re
-
+    
+    
     def clear_start_end_dash(string):
         return re.sub(r'^[\s\-]*-|-[\s\-]*$', '', string)
         
@@ -89,12 +90,12 @@ So let's decrease the number of duplicate functions:
 
 This code has a few problems:
 
-* Ease to write but difficult to read.
+* Easy to write but difficult to read.
 * We can't use test fixture (`setUp`, `tearDown`) with each case.
-* If one case failed, the other cases won't run.
+* If some case fails, the other cases won't run.
 * If test `test_remove_dash` fails, it won't help us find out what happened.
 
-Look how easy we may solve this problem using this library:
+Look how easy we may solve these problems using this library:
 
 .. code:: python
 
