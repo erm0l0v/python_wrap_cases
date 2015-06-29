@@ -2,6 +2,6 @@
 
 __author__ = 'Kirill Ermolov'
 __email__ = 'erm0l0v@ya.ru'
-__version__ = '0.1.3'
+__version__ = '0.1.4'
 
 from .wrap_cases import *
