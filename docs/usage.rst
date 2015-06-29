@@ -14,7 +14,7 @@ To use Python wrap cases in a project
         @wrap_case('value1_a', 'value2_a')
         @wrap_case('value1_b', 'value2_b')
         def test_with_params(self, param1, param2)
-            ...
+            # ...
         
 ::
 
@@ -86,6 +86,8 @@ List generator helps to generate cases based on list of arguments.
 ::
 
 This code will work like this one:
+
+List generator helps to generate cases based on list of arguments.
 
 .. code:: python
 
