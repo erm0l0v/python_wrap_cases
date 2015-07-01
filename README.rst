@@ -29,8 +29,7 @@ Let's write some tests for this function:
     
     def clear_start_end_dash(string):
         return re.sub(r'^[\s\-]*-|-[\s\-]*$', '', string)
-        
-::;
+
 
 We may write something like this:
 
@@ -61,7 +60,6 @@ We may write something like this:
             result = clear_start_end_dash('my-string')
             self.assertEqual(result, 'my-string')
 
-::;
 
 It's good, but we spent a lot of time to write those absolutely the same test functions.
 
@@ -86,7 +84,6 @@ So let's decrease the number of duplicate functions:
                 result = clear_start_end_dash(string)
                 self.assertEqual(result, expected_result)
 
-::;
 
 This code has a few problems:
 
@@ -114,7 +111,6 @@ Look how easy we may solve these problems using this library:
             result = clear_start_end_dash(string)
             self.assertEqual(result, expected_result)
 
-::;
 
 This code generates 5 tests, that works like a simple test functions.
 
@@ -128,7 +124,6 @@ Console output:
     test_remove_dash_u'my string-- -- -- - '_u'my string' (tests.example.test_simple_test.ClearStartEndDashWrapTest) ... ok
     test_remove_dash_u'my-string'_u'my-string' (tests.example.test_simple_test.ClearStartEndDashWrapTest) ... ok
 
-::;
 
 Installation
 ------------
@@ -137,7 +132,6 @@ Installation
 
     pip install python_wrap_cases
 
-::;
 
 Free software: BSD license
 

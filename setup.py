@@ -56,7 +56,7 @@ setup(
     install_requires=requirements,
     license="BSD",
     zip_safe=False,
-    keywords='python_wrap_cases',
+    keywords='python_wrap_cases, test cases, test, test with parameters, generate tests',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
