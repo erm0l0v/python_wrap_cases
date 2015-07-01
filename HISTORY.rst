@@ -19,9 +19,13 @@ History
 
 * Add some docs
 
-
 0.1.4 (2015-06-29)
 --------------------
 
 * ReadMe add semicolon
 * Fix pypi readme
+
+0.1.5 (2015-07-01)
+--------------------
+
+* README remove ::;
