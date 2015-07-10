@@ -35,3 +35,8 @@ History
 --------------------
 
 * Add tests fot python 3.2
+
+0.1.7 (2015-07-10)
+--------------------
+
+* Add six dependency
