@@ -1,10 +1,11 @@
 from __future__ import unicode_literals
 import unittest
-from python_wrap_cases import *
+from python_wrap_cases import wrap_case
 from tests.cases.base_case import BaseCase
 
 
-class FuncGenerator(unittest.TestCase, WrapCasesMixin):
+@wrap_case
+class FuncGenerator(unittest.TestCase):
 
     @wrap_case(string__func=lambda: 'Hello World{0}'.format('!'*3))
     def test_simple_func(self, string):

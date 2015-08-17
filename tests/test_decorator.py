@@ -1,5 +1,5 @@
 from __future__ import unicode_literals
-from unittest import TestCase
+import unittest
 from python_wrap_cases import *
 from python_wrap_cases.case_wrapper import TestCasesWrapper
 
@@ -17,7 +17,15 @@ def function_witch_two_test_case():
     pass
 
 
-class TestFunction(TestCase):
+class TestCaseWithDoc(unittest.TestCase, WrapCasesMixin):
+
+    @wrap_case(1)
+    def test_function_with_doc(self, data):
+        """Some doc"""
+        self.assertEqual(data, data)
+
+
+class TestFunction(unittest.TestCase):
 
     def test_set_wrapper(self):
         wrapper = getattr(function, 'test_cases_wrapper')
@@ -32,7 +40,7 @@ class TestFunction(TestCase):
         self.assertEqual(len(wrapper.cases), 1)
 
 
-class TestFunctionWitchTwoTestCase(TestCase):
+class TestFunctionWitchTwoTestCase(unittest.TestCase):
 
     def test_set_wrapper(self):
         wrapper = getattr(function_witch_two_test_case, 'test_cases_wrapper')
@@ -45,3 +53,11 @@ class TestFunctionWitchTwoTestCase(TestCase):
     def test_cases_count_2(self):
         wrapper = getattr(function_witch_two_test_case, 'test_cases_wrapper')
         self.assertEqual(len(wrapper.cases), 2)
+
+
+class TestCaseDoc(unittest.TestCase):
+
+    def test_doc_in_case(self):
+        instance = unittest.TestLoader().loadTestsFromTestCase(TestCaseWithDoc)
+        func = instance._tests[0]
+        self.assertEqual(func._testMethodDoc, 'Some doc')

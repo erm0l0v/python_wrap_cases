@@ -1,10 +1,11 @@
 from __future__ import unicode_literals
 import unittest
-from python_wrap_cases import *
+from python_wrap_cases import wrap_case
 from tests.cases.base_case import BaseCase
 
 
-class ListGenerator(unittest.TestCase, WrapCasesMixin):
+@wrap_case
+class ListGenerator(unittest.TestCase):
 
     @wrap_case(number__list=[0, 1, 2, 3])
     def test_div_1(self, number):
@@ -22,7 +23,8 @@ class ListGeneratorTest(BaseCase):
     ]
 
 
-class MultipleListGenerator(unittest.TestCase, WrapCasesMixin):
+@wrap_case
+class MultipleListGenerator(unittest.TestCase):
 
     @wrap_case(a__list=[1, 2], b__list=[0, 1])
     def test_gte(self, a, b):

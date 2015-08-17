@@ -1,10 +1,11 @@
 from __future__ import unicode_literals
 import unittest
-from python_wrap_cases import *
+from python_wrap_cases import wrap_case
 from tests.cases.base_case import BaseCase
 
 
-class SyncListGenerator(unittest.TestCase, WrapCasesMixin):
+@wrap_case
+class SyncListGenerator(unittest.TestCase):
 
     @wrap_case(number__sync_list=[0, 1, 2, 3], result__sync_list=[1, 2, 3, 4])
     def test_add_1(self, number, result):
@@ -22,7 +23,8 @@ class ListGeneratorTest(BaseCase):
     ]
 
 
-class MultipleSyncListGenerator(unittest.TestCase, WrapCasesMixin):
+@wrap_case
+class MultipleSyncListGenerator(unittest.TestCase):
 
     @wrap_case(a__sync_list=[1, 2, 3, 4, 5, 6], b__sync_list=[1, 2, 3, 4], result__sync_list=[2, 4, 6, 8])
     def test_add(self, a, b, result):

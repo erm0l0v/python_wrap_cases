@@ -1,10 +1,11 @@
 from __future__ import unicode_literals
 import unittest
-from python_wrap_cases import *
+from python_wrap_cases import wrap_case
 from tests.cases.base_case import BaseCase
 
 
-class RangeGenerator(unittest.TestCase, WrapCasesMixin):
+@wrap_case
+class RangeGenerator(unittest.TestCase):
 
     @wrap_case(number__range=4)
     def test_range_4_div_1(self, number):

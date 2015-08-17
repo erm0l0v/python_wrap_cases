@@ -1,10 +1,11 @@
 from __future__ import unicode_literals
 import unittest
-from python_wrap_cases import *
+from python_wrap_cases import wrap_case
 from tests.cases.base_case import BaseCase
 
 
-class CustomGenerators(unittest.TestCase, WrapCasesMixin):
+@wrap_case
+class CustomGenerators(unittest.TestCase):
 
     @wrap_case(number__list=[0, 1, 2, 3], result__custom=lambda number, result: number + 1)
     def test_add_1(self, number, result):

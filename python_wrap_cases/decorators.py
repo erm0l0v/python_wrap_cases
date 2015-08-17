@@ -1,9 +1,17 @@
 from __future__ import unicode_literals
 from functools import wraps
+from unittest import TestCase
 from .case_wrapper import TestCasesWrapper
+from .metaclasses import TestCaseMeta
+import six
 
 
 class TestCaseDecorator(object):
+
+    def __new__(cls, *args, **kwargs):
+        if args and type(args[0]) == type and issubclass(args[0], TestCase):
+            return six.add_metaclass(TestCaseMeta)(args[0])
+        return super(TestCaseDecorator, cls).__new__(cls, *args, **kwargs)
 
     def __init__(self, *args, **kwargs):
         self.__args = args

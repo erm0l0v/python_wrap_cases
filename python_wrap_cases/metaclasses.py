@@ -37,7 +37,7 @@ class TestCaseMeta(type):
             new_argument_list = new_argument_list + args
             new_argument_dict.update(kwargs)
             return function(self, *new_argument_list, **new_argument_dict)
-        return function_name + '_{0}'.format(str(case)), wrap_function
+        return '{0}_{1}'.format(function_name, str(case)), wrap_function
 
 
 class ArgumentWrapper(object):
