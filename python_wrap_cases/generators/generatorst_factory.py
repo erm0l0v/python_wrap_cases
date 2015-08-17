@@ -3,12 +3,16 @@ from functools import wraps
 from .list_generator import ListGenerator
 from .custom_generator import CustomGenerator
 from .sync_list_generator import SyncListGenerator
+from .func_generator import FuncGenerator
+from .range_generator import RangeGenerator
 
 
 generators_dict = dict(
     list=ListGenerator,
     custom=CustomGenerator,
-    sync_list=SyncListGenerator
+    sync_list=SyncListGenerator,
+    func=FuncGenerator,
+    range=RangeGenerator,
 )
 
 
