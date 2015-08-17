@@ -12,5 +12,4 @@ class BaseGenerator(object):
     @staticmethod
     def is_iter(obj):
         return (isinstance(obj, collections.Iterable) and
-                not isinstance(obj, str) and
-                not isinstance(obj, unicode))
+                not isinstance(obj, basestring))

@@ -2,7 +2,6 @@ from __future__ import unicode_literals
 from .base_generator import BaseGenerator
 
 
-
 class FuncGenerator(BaseGenerator):
 
     def __init__(self, func):
