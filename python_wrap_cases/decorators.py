@@ -11,7 +11,7 @@ class TestCaseDecorator(object):
     def __new__(cls, *args, **kwargs):
         if args and type(args[0]) == type and issubclass(args[0], TestCase):
             return six.add_metaclass(TestCaseMeta)(args[0])
-        return object.__new__(cls, *args, **kwargs)
+        return object.__new__(cls)
 
     def __init__(self, *args, **kwargs):
         self.__args = args
