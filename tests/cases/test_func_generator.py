@@ -10,7 +10,7 @@ class FuncGenerator(unittest.TestCase, WrapCasesMixin):
     def test_simple_func(self, string):
         self.assertEqual(string, 'Hello World!!!')
 
-    @wrap_case(number__func=lambda: range(4))
+    @wrap_case(number__func=lambda: iter(range(4)))
     def test_func_range(self, number):
         self.assertEqual(number/1, number)
 

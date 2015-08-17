@@ -10,6 +10,10 @@ class CustomGenerators(unittest.TestCase, WrapCasesMixin):
     def test_add_1(self, number, result):
         self.assertEqual(number + 1, result)
 
+    @wrap_case(number__range=(1, 4,), smaller_number__custom=lambda number, smaller_number: iter(range(number)))
+    def test_less_then(self, number, smaller_number):
+        self.assertLess(smaller_number, number)
+
 
 class CustomGeneratorsTest(BaseCase):
 
@@ -19,4 +23,10 @@ class CustomGeneratorsTest(BaseCase):
         'test_add_1_number(1)_result(2)',
         'test_add_1_number(2)_result(3)',
         'test_add_1_number(3)_result(4)',
+        'test_less_then_number(1)_smaller_number(0)',
+        'test_less_then_number(2)_smaller_number(0)',
+        'test_less_then_number(2)_smaller_number(1)',
+        'test_less_then_number(3)_smaller_number(0)',
+        'test_less_then_number(3)_smaller_number(1)',
+        'test_less_then_number(3)_smaller_number(2)',
     ]

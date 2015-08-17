@@ -11,6 +11,6 @@ class CustomGenerator(BaseGenerator):
 
     def generate_cases(self, arg_index, key, *args, **kwargs):
         result = self.func(*args, **kwargs)
-        if not (isinstance(result, list) or isinstance(result, tuple)):
+        if not hasattr(result, '__iter__'):
             result = [result]
         return result
