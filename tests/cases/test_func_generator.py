@@ -19,7 +19,7 @@ class FuncGeneratorTest(BaseCase):
 
     case_class = FuncGenerator
     cases_names = (
-        'test_simple_func_string(u\'Hello World!!!\')',
+        'test_simple_func_string(Hello World!!!)',
         'test_func_range_number(0)',
         'test_func_range_number(1)',
         'test_func_range_number(2)',
