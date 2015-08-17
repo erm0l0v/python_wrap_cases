@@ -12,7 +12,7 @@ class CustomGenerators(unittest.TestCase, WrapCasesMixin):
 
     @wrap_case(number__range=(1, 4,), smaller_number__custom=lambda number, smaller_number: iter(range(number)))
     def test_less_then(self, number, smaller_number):
-        self.assertLess(smaller_number, number)
+        self.assertTrue(number > smaller_number)
 
 
 class CustomGeneratorsTest(BaseCase):
