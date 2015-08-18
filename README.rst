@@ -97,10 +97,11 @@ Look how easy we may solve these problems using this library:
 .. code:: python
 
     from unittest import TestCase
-    from python_wrap_cases import *
+    from python_wrap_cases import wrap_case
     
     
-    class ClearStartEndDashWrapTest(TestCase, WrapCasesMixin):
+    @wrap_case
+    class ClearStartEndDashWrapTest(TestCase):
 
         @wrap_case('-my string', 'my string')
         @wrap_case('-  -- --my string', 'my string')
