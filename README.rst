@@ -2,6 +2,10 @@
 Python wrap cases
 ===============================
 
+.. image:: https://badges.gitter.im/Join%20Chat.svg
+   :alt: Join the chat at https://gitter.im/erm0l0v/python_wrap_cases
+   :target: https://gitter.im/erm0l0v/python_wrap_cases?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+
 .. image:: https://img.shields.io/travis/erm0l0v/python_wrap_cases.svg
         :target: https://travis-ci.org/erm0l0v/python_wrap_cases
 
