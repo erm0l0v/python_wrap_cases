@@ -40,3 +40,11 @@ History
 --------------------
 
 * Add six dependency
+
+0.1.8 (2015-08-21)
+--------------------
+
+* Add func generator
+* Add range generator
+* Fix problem with iterator in custom generator
+* Add new API for declaration wrapped TestCase. (added wrap_case decorator without parameters)
