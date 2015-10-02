@@ -16,6 +16,9 @@ Python wrap cases
         :target: https://readthedocs.org/projects/python-wrap-cases/?badge=latest
         :alt: Documentation Status
 
+.. image:: https://requires.io/github/erm0l0v/python_wrap_cases/requirements.svg?branch=master
+     :target: https://requires.io/github/erm0l0v/python_wrap_cases/requirements/?branch=master
+     :alt: Requirements Status
 
 Simple library for generate test cases with parameters.
 
