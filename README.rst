@@ -20,6 +20,10 @@ Python wrap cases
      :target: https://requires.io/github/erm0l0v/python_wrap_cases/requirements/?branch=master
      :alt: Requirements Status
 
+.. image:: https://landscape.io/github/erm0l0v/python_wrap_cases/master/landscape.svg?style=flat
+   :target: https://landscape.io/github/erm0l0v/python_wrap_cases/master
+   :alt: Code Health
+
 Simple library for generate test cases with parameters.
 
 What is this?
