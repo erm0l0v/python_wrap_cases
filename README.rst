@@ -24,6 +24,9 @@ Python wrap cases
    :target: https://landscape.io/github/erm0l0v/python_wrap_cases/master
    :alt: Code Health
 
+.. image:: https://api.codacy.com/project/badge/7daff4a5f5fd4f16a9170c3887f3c155
+    :target: https://www.codacy.com/app/erm0l0v/python_wrap_cases
+
 Simple library for generate test cases with parameters.
 
 What is this?
