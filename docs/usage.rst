@@ -19,7 +19,7 @@ To use Python wrap cases in a project
         
 ::
 
-Just add mixin WrapCasesMixin to your test class and add decorators @wrap_case to test function with parameters that you wanna add to test method.
+Just add decorators @wrap_case to test function with parameters that you wanna add to test method.
 
 
 Usage with mock

@@ -16,6 +16,16 @@ Python wrap cases
         :target: https://readthedocs.org/projects/python-wrap-cases/?badge=latest
         :alt: Documentation Status
 
+.. image:: https://requires.io/github/erm0l0v/python_wrap_cases/requirements.svg?branch=master
+     :target: https://requires.io/github/erm0l0v/python_wrap_cases/requirements/?branch=master
+     :alt: Requirements Status
+
+.. image:: https://landscape.io/github/erm0l0v/python_wrap_cases/master/landscape.svg?style=flat
+   :target: https://landscape.io/github/erm0l0v/python_wrap_cases/master
+   :alt: Code Health
+
+.. image:: https://api.codacy.com/project/badge/7daff4a5f5fd4f16a9170c3887f3c155
+    :target: https://www.codacy.com/app/erm0l0v/python_wrap_cases
 
 Simple library for generate test cases with parameters.
 
